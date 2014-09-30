@@ -25,7 +25,7 @@ body, html {
 #slide-2 .bcg {
     background: none; 
     background-color: #010101; 
-    height: 310px; 
+    height: 510px; 
     text-align: center
 }
 
@@ -35,7 +35,8 @@ body, html {
 }
 
 #slide-4 .bcg {
-    background-image:url('https://gp1.wac.edgecastcdn.net/806614/photos/photos.500px.net/81953299/fe0a39c8f93d1357e83ddd62ddc523ab78d3a72a/5.jpg')
+    background-image:url('https://gp1.wac.edgecastcdn.net/806614/photos/photos.500px.net/81953299/fe0a39c8f93d1357e83ddd62ddc523ab78d3a72a/5.jpg');
+    height: 710px; 
 }
 
 
