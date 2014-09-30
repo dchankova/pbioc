@@ -1,61 +1,61 @@
 body, html {
-	height: 100%;
-	min-height: 100%;
-	background-color: #000000;
+    height: 100%;
+    min-height: 100%;
+    background-color: #000000;
 }
 .main {
-	overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 /*#region background*/
 .bcg {
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	height: 100%;
-	width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
 }
 
 #slide-1 .bcg {
-	background-image:url('https://gp1.wac.edgecastcdn.net/806614/photos/photos.500px.net/84664889/26e739cd5162f3ec797e083a8fa0292c0b591548/5.jpg');
-	height: 989px;
-	}
+    background-image:url('https://gp1.wac.edgecastcdn.net/806614/photos/photos.500px.net/84664889/26e739cd5162f3ec797e083a8fa0292c0b591548/5.jpg');
+    height: 989px;
+    }
 
 #slide-2 .bcg {
-	background: none; 
-	background-color: #010101; 
-	height: 310px; 
-	text-align: center
+    background: none; 
+    background-color: #010101; 
+    height: 310px; 
+    text-align: center
 }
 
 #slide-3 .bcg {
-	background-image:url('https://gp1.wac.edgecastcdn.net/806614/photos/photos.500px.net/82772303/8635e80d94ecdf01597311b42b26258ce281d5c2/5.jpg');
-	height: 989px;
+    background-image:url('https://gp1.wac.edgecastcdn.net/806614/photos/photos.500px.net/82772303/8635e80d94ecdf01597311b42b26258ce281d5c2/5.jpg');
+    height: 989px;
 }
 
 #slide-4 .bcg {
-	background-image:url('https://gp1.wac.edgecastcdn.net/806614/photos/photos.500px.net/81953299/fe0a39c8f93d1357e83ddd62ddc523ab78d3a72a/5.jpg')
+    background-image:url('https://gp1.wac.edgecastcdn.net/806614/photos/photos.500px.net/81953299/fe0a39c8f93d1357e83ddd62ddc523ab78d3a72a/5.jpg')
 }
 
 
  .hsContainer {
-	display: table;
-	table-layout: fixed;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	position: relative;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 .hsContent {
-	max-width: 450px;
-	margin: -150px auto 0 auto;
-	display: table-cell;
-	vertical-align: middle;
-	color: #ffffff;
-	padding: 0 8%;
-	text-align: center
+    max-width: 450px;
+    margin: -150px auto 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    color: #ffffff;
+    padding: 0 8%;
+    text-align: center
 }
 
 /*#endregion background*/
