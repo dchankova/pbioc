@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="generator"
-    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
     <title>PBIOC</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -38,6 +36,12 @@
         </div>
       </div>
     </div>
+ 
+
+<nav id="next-btn">
+    <a href="#" class="next-icon"></a>
+</nav>
+
     <section id="slide-1">
       <div class="bcg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;"
       data-anchor-target="#slide-1" style="background-position: 50% 0px;">
@@ -83,9 +87,27 @@
   <script src="js/jquery.min.js"></script> 
   <script src="js/jquery.imageloader.js"></script> 
   <script src="js/skrollr.js"></script> 
+  <script src="js/modernizr.js"></script> 
+   <script src="js/video.js"></script>
+   <script src="js/bigvideo.js"></script> 
+   <script src="js/jquery.transit.min.js"></script>
   <script type="text/javascript">
                 var s = skrollr.init();
             
 </script> 
   <script src="js/bootstrap.min.js"></script></body>
+  
+   <script>
+	    $(function() {
+            var BV = new $.BigVideo();
+			BV.init();
+            if (Modernizr.touch) {
+            <!-- BV.show('video-poster.jpg'); -->
+        } else {
+            BV.show('video/river.mp4',{ambient:true});
+        }
+        });
+    </script>
+    
+    
 </html>

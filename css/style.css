@@ -60,3 +60,46 @@ body, html {
 }
 
 /*#endregion background*/
+
+
+.wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Nav */
+
+nav {
+    position: absolute;
+    bottom: 5%;
+    left: 47%;
+    padding: 20px;
+    background: #000;
+    border-radius: 40px;
+    opacity: .4;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* nav:hover {
+    opacity: .6;
+}
+ */
+.next-icon {
+    display: block;
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 0px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+    color: #fff;
+    text-decoration: none;
+}
