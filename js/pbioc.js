@@ -17,6 +17,7 @@ $(window).scroll(function() {
 $(function() {
     scrollrInit();
     videoInit();
+    $('.video-js').css('position','relative');
 
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
@@ -38,10 +39,13 @@ var scrollrInit = function() {
 
 // Video scripts
 var videoInit = function() {
+
     var BV = new $.BigVideo({useFlashForFirefox:false});
     BV.init();
+
     var vid = document.getElementById("big-video-vid_html5_api");
     vid.muted = true;
+
     if (Modernizr.touch) {
         BV.show('video-poster.jpg');
     } else if (/opera/.test(navigator.userAgent.toLowerCase())){
@@ -49,9 +53,13 @@ var videoInit = function() {
     } else {
         BV.show('http://video-js.zencoder.com/oceans-clip.mp4',{ doLoop:true, altSource:'http://video-js.zencoder.com/oceans-clip.mp4'});
     }
+
     $('#video-toggle').on('click', function(e) {
-        if (this.checked)    vid.muted = false;
-        else                 vid.muted = true;
+        if (this.checked) {
+            vid.muted = false;
+        } else {
+            vid.muted = true;
+        }
     });
 
     //var textTracks = vid.textTracks; // one for each track element
