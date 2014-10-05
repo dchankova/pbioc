@@ -46,20 +46,24 @@
 
                 </div>
             </div>
- 
-<div class="videoControlPanet">
-<input type="checkbox" id="video-toggle"> Video Sound
-<img id="flag-en" src="http://www.funcity.bg/wp-content/uploads/flags/flag-uk.jpg" />
-<img id="flag-bg" src="http://www.funcity.bg/wp-content/uploads/flags/flag_bg.png" />
-</div>
-<nav id="next-btn">
-    <a href="#" class="next-icon"></a>
-</nav>
+
+            <div class="videoControlPanet">
+                <input type="checkbox" id="video-toggle"> Video Sound
+                <img id="flag-en" src="http://www.funcity.bg/wp-content/uploads/flags/flag-uk.jpg" />
+                <img id="flag-bg" src="http://www.funcity.bg/wp-content/uploads/flags/flag_bg.png" />
+            </div>
+
+            <div id="next-btn">
+                <a class="next-btn page-scroll" href="#team">
+                    <img id="botImg" width="60" height="60" src="img/arrow.png" class="animated-arrow bounce hinge desktop">
+                </a>
+            </div>
+
 
             <!-- Sections  -->
 
             <section id="team">
-                <div class="bcg" data-0="background-postition: 10% 0px;" data-top="background-position: 50% 100px;" data-anchor-target="#team">
+                <div class="bcg" data-0="background-postition: 110% 80%;" data-top="background-position: 150% 90%;" data-anchor-target="#team">
                     <div class="hsContainer">
                         <div class="hsContent">
                             <h2 data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0"
@@ -105,52 +109,19 @@
 
             <!-- End of Sections -->
         </div>
-  <script src="js/jquery.min.js"></script> 
-  <script src="js/jquery.imageloader.js"></script> 
-  <script src="js/skrollr.js"></script> 
-  <script src="js/modernizr.js"></script> 
-   <script src="//vjs.zencdn.net/4.9/video.js"></script>
-   <script src="js/bigvideo.js"></script> 
-   <script src="js/jquery.transit.min.js"></script>
-  <script type="text/javascript">
-                var s = skrollr.init();
-            
-</script> 
-  <script src="js/bootstrap.min.js"></script></body>
-  
-   <script>
-	    $(function() {
-           var BV = new $.BigVideo({useFlashForFirefox:false});
-			BV.init();
-            var vid = document.getElementById("big-video-vid_html5_api");
-            vid.muted = true;
-            if (Modernizr.touch) {
-            BV.show('video-poster.jpg');
-             } else if (/opera/.test(navigator.userAgent.toLowerCase())){
-            BV.show('http://video-js.zencoder.com/oceans-clip.mp4', { doLoop:true});
-            } else {
-            BV.show('http://video-js.zencoder.com/oceans-clip.mp4',{ doLoop:true, altSource:'http://video-js.zencoder.com/oceans-clip.mp4'});
-            }
-           $('#video-toggle').on('click', function(e) {
-                if (this.checked)    vid.muted = false;
-                else                 vid.muted = true;
-            });
-            
-           //var textTracks = vid.textTracks; // one for each track element
-           // var textTrack = textTracks[0]; // corresponds to the first track element
-            //textTrack.kind = "subtitles"; // e.g. "subtitles"
-            //textTrack.mode = "showing"; // e.g. "disabled", hidden" or "showing"
-            vid.innerHTML = '<track id="videoBGSubs" kind="captions" src="subs/bgSubs.vtt" srclang="en" label="Bulgarian" default>'
-              $('#flag-en').on('click', function(e) {
-               $('#videoBGSubs').remove();
-                vid.innerHTML = '<track id="videoENSubs" kind="captions" src="subs/enSubs.vtt" srclang="en" label="English">'
-            });
-              $('#flag-bg').on('click', function(e) {
-               $('#videoENSubs').remove();
-                vid.innerHTML = '<track id="videoBGSubs" kind="captions" src="subs/bgSubs.vtt" srclang="en" label="Bulgarian">'
-            });
-        });
-    </script>
-    
-    
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.imageloader.js"></script>
+        <script src="js/jquery.transit.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+
+        <script src="js/skrollr.js"></script>
+        <script src="js/modernizr.js"></script>
+
+        <script src="//vjs.zencdn.net/4.9/video.js"></script>
+        <script src="js/bigvideo.js"></script>
+
+        <!-- Custom JS -->
+        <script src="js/pbioc.js"></script>
+    </body>
 </html>
