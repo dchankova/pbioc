@@ -36,7 +36,11 @@
         </div>
       </div>
     </div>
- 
+<div class="videoControlPanet">
+<input type="checkbox" id="video-toggle"> Video Sound
+<img id="flag-en" src="http://www.funcity.bg/wp-content/uploads/flags/flag-uk.jpg" />
+<img id="flag-bg" src="http://www.funcity.bg/wp-content/uploads/flags/flag_bg.png" />
+</div> 
 
 <nav id="next-btn">
     <a href="#" class="next-icon"></a>
@@ -84,11 +88,12 @@
       <div class="bcg"></div>
     </section>
   </div>
+
   <script src="js/jquery.min.js"></script> 
   <script src="js/jquery.imageloader.js"></script> 
   <script src="js/skrollr.js"></script> 
   <script src="js/modernizr.js"></script> 
-   <script src="js/video.js"></script>
+  <script src="//vjs.zencdn.net/4.9/video.js"></script>
    <script src="js/bigvideo.js"></script> 
    <script src="js/jquery.transit.min.js"></script>
   <script type="text/javascript">
@@ -96,17 +101,43 @@
             
 </script> 
   <script src="js/bootstrap.min.js"></script></body>
-  
+
    <script>
+   
+   
 	    $(function() {
-            var BV = new $.BigVideo();
+           var BV = new $.BigVideo({useFlashForFirefox:false});
 			BV.init();
+            var vid = document.getElementById("big-video-vid_html5_api");
+            vid.muted = true;
             if (Modernizr.touch) {
-            <!-- BV.show('video-poster.jpg'); -->
-        } else {
-            BV.show('video/river.mp4',{ambient:true});
-        }
+            BV.show('video-poster.jpg');
+             } else if (/opera/.test(navigator.userAgent.toLowerCase())){
+            BV.show('http://video-js.zencoder.com/oceans-clip.mp4', { doLoop:true});
+            } else {
+            BV.show('http://video-js.zencoder.com/oceans-clip.mp4',{ doLoop:true, altSource:'http://video-js.zencoder.com/oceans-clip.mp4'});
+            }
+           $('#video-toggle').on('click', function(e) {
+                if (this.checked)    vid.muted = false;
+                else                 vid.muted = true;
+            });
+            
+           //var textTracks = vid.textTracks; // one for each track element
+           // var textTrack = textTracks[0]; // corresponds to the first track element
+            //textTrack.kind = "subtitles"; // e.g. "subtitles"
+            //textTrack.mode = "showing"; // e.g. "disabled", hidden" or "showing"
+            vid.innerHTML = '<track id="videoBGSubs" kind="captions" src="subs/bgSubs.vtt" srclang="en" label="Bulgarian" default>'
+              $('#flag-en').on('click', function(e) {
+               $('#videoBGSubs').remove();
+                vid.innerHTML = '<track id="videoENSubs" kind="captions" src="subs/enSubs.vtt" srclang="en" label="English">'
+            });
+              $('#flag-bg').on('click', function(e) {
+               $('#videoENSubs').remove();
+                vid.innerHTML = '<track id="videoBGSubs" kind="captions" src="subs/bgSubs.vtt" srclang="en" label="Bulgarian">'
+            });
         });
+        
+      
     </script>
     
     
