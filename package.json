@@ -1,0 +1,27 @@
+{
+  "name": "pbioc",
+  "version": "0.0.1",
+  "description": "pbioc website",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dchankova/pbioc.git"
+  },
+  "keywords": [
+    "hopesoap"
+  ],
+  "author": "Didi & Niki",
+  "bugs": {
+    "url": "https://github.com/dchankova/pbioc/issues"
+  },
+  "homepage": "https://github.com/dchankova/pbioc",
+
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-less": "~0.11.0",
+    "grunt-contrib-watch": "~0.6.1"
+  }
+}
