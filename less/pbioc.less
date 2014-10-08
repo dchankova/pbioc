@@ -5,9 +5,9 @@ body, html {
 
     height: 100%;
     min-height: 100%;
-    background-color: #000000;
+    background-color: #fff;
     overflow-x:hidden;
-    color: #FFF;
+    color: #fff;
 
     font-family:@font-family-body;
     -webkit-font-smoothing:antialiased;
@@ -27,7 +27,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0 0 35px;
+    margin: 0 0 15px;
     text-transform: uppercase;
     font-family: @font-family-menus;
     font-weight: 700;
@@ -54,7 +54,7 @@ a {
 
 .light {
     font-weight: 400;
-    color: @light-orange;
+    color: @light-green;
 }
 .pbioc-logo {
     width: 50px; 
@@ -66,6 +66,7 @@ a {
     border-bottom: 1px solid fade(@light, 30%);
     font-family: @font-family-menus;
     .navbar-brand {
+        padding:0px;
         font-weight: 700;
         &:focus {
             outline: none;
@@ -81,21 +82,21 @@ a {
         }
     }
     a {
-        color: @light;
+        color: @menu-link;
     }
     .nav {
         li {
-            text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.5);
+            
             &.active {
                 outline: nonte;
-                background-color: fade(@light, 30%);
+                background-color: fade(@menu-link, 10%);
             }
             a {
                 -webkit-transition: background .3s ease-in-out;
                 -moz-transition: background .3s ease-in-out;
                 transition: background .3s ease-in-out;
                 &:hover {
-                    color: #FFF;
+                    color: #BEB7B7;
                     background-color: transparent;
                 }
                 &:focus,
@@ -118,6 +119,9 @@ a {
             margin: 0 5px;
         }
 
+        .volume-btn {
+            color: #646464;
+        }
         .volume-btn input[type=checkbox] + label:before {
             content: "\f026";
             font-family: FontAwesome;
@@ -408,6 +412,7 @@ span.radio-label {
 }
 
 .contact-section {
+    background-color: #5b9b40;
     display: table;
     width: 100%;
     padding: 50px 0;
@@ -453,6 +458,8 @@ footer {
     p {
         margin: 0;
     }
+    background-color: #fff;
+    color:#000;
 }
 
 ::-moz-selection {
@@ -502,6 +509,14 @@ label {
 .order-box {
     display: none;
 }
+#map-canvas{
+    height: 400px;
+    width: 550px;
+ 
+}
+.group{
+    margin-bottom:35px;
+}
 
 @media(min-width:767px) {
     p {
@@ -514,7 +529,7 @@ label {
         padding: 20px 0;
         border-bottom: none;
         letter-spacing: 1px;
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.9);
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -575,14 +590,14 @@ label {
 
 #team .bcg {
     background-image: url('../img/doctors.jpg');
-    background-color: #FFF;
+    background-color: #fff;
     background-size: 20%;
     height: 400px;
 }
 
 #methods .bcg {
     background: none;
-    background-color: #010101;
+    background-color: #6ba741;
     height: 510px;
     text-align: center
 }
