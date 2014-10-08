@@ -54,11 +54,22 @@ var videoInit = function() {
         BV.show('http://video-js.zencoder.com/oceans-clip.mp4',{ doLoop:true, altSource:'http://video-js.zencoder.com/oceans-clip.mp4'});
     }
 
-    $('#video-toggle').on('click', function(e) {
+    $('#sound-toggle').on('click', function(e) {
         if (this.checked) {
             vid.muted = false;
         } else {
             vid.muted = true;
+        }
+    });
+
+    $('#subs-toggle').click(function() {
+        if (this.checked) {
+            alert(1);
+            $('#big-video-wrap video track').addClass('show');
+            $('#big-video-wrap video track').removeClass('hide');
+        } else {
+            $('#big-video-wrap video track').addClass('hide');
+            $('#big-video-wrap video track').removeClass('show');
         }
     });
 

@@ -30,67 +30,75 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 <div class="main">
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i>  <span class="light">PBIOC</span>
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll navbar-right-custom" href="#team">Team</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll navbar-right-custom" href="#methods">Methods</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll navbar-right-custom" href="#pricing">Pricing</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll navbar-right-custom" href="#contacts">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Video control bar -->
-    <div class="videoControlPanel">
-        <input type="checkbox" id="video-toggle"> Video Sound
-        <img id="flag-en" src="http://www.funcity.bg/wp-content/uploads/flags/flag-uk.jpg" />
-        <img id="flag-bg" src="http://www.funcity.bg/wp-content/uploads/flags/flag_bg.png" />
-    </div>
-
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <a href="#team" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="#page-top">
+                        <i class="fa fa-play-circle"></i>  <span class="light">PBIOC</span>
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav">
+
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll navbar-right-custom" href="#team">Team</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll navbar-right-custom" href="#methods">Methods</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll navbar-right-custom" href="#pricing">Pricing</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll navbar-right-custom" href="#contacts">Contact</a>
+                        </li>
+                        <li class="controlls">
+                            <img id="flag-en" src="http://www.funcity.bg/wp-content/uploads/flags/flag-uk.jpg" />
+                            <img id="flag-bg" src="http://www.funcity.bg/wp-content/uploads/flags/flag_bg.png" />
+                        </li>
+                        <li class="controlls">
+                            <span class="volume-btn">
+                                <input type='checkbox' name='sound-toggle' value='valuable' id="sound-toggle"/>
+                                <label for="sound-toggle" class="fa fa-lg"></label>
+                            </span>
+                            <span class="subs-btn">
+                                <input type='checkbox' name='subs-toggle' value='valuable' id="subs-toggle" class="subs-btn" checked />
+                                <label for="subs-toggle" class="fa fa-lg"></label>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- Intro Header -->
+        <div class="intro">
+            <div class="intro-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <a href="#team" class="btn btn-circle page-scroll">
+                                <i class="fa fa-angle-double-down animated"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-
     <!-- Sections  -->
 
     <section id="team">
