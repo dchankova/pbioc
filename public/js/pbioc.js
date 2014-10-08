@@ -18,8 +18,7 @@ var subs = {
     bg : {
         label : "Bulgarian",
         srclang : "bg",
-        src : "subs/bg-subs.vtt",
-        dflt : true
+        src : "subs/bg-subs.vtt"
     }
 }
 
