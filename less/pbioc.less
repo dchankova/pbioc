@@ -135,11 +135,11 @@ a {
         .subs-btn input[type=checkbox] + label:before {
             content: "sub";
             font-family: FontAwesome;
-            text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.5);
+            color: darken(@light, 30%);
         }
 
         .subs-btn input[type=checkbox]:checked + label:before {
-            text-shadow: 0 -1px 10px rgb(0, 0, 0);
+            color: @light;
         }
 
         .controlls {

@@ -1,9 +1,3 @@
-/*!
- * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
 // jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
     if ($(".navbar").offset().top > 50) {
@@ -13,12 +7,32 @@ $(window).scroll(function() {
     }
 });
 
-// jQuery for page scrolling feature - requires jQuery Easing plugin
+var DEFAULT_LANG = "bg";
+
+var subs = {
+    en : {
+        label : "English",
+        srclang : "en",
+        src : "subs/en-subs.vtt"
+    },
+    bg : {
+        label : "Bulgarian",
+        srclang : "bg",
+        src : "subs/bg-subs.vtt"
+    }
+}
+
 $(function() {
+
     scrollrInit();
     videoInit();
-    $('.video-js').css('position','relative');
+    closeResponsiveMenuOnClick();    
+    initMenuAnimation();
 
+    $('.video-js').css('position','relative');
+});
+
+var initMenuAnimation = function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
@@ -26,16 +40,18 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
-});
+}
 
-// Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
-});
+var closeResponsiveMenuOnClick = function() {
+    $('.navbar-collapse ul li a').click(function() {
+        $('.navbar-toggle:visible').click();
+    });    
+}
 
 var scrollrInit = function() {
     var s = skrollr.init();
 }
+
 
 // Video scripts
 var videoInit = function() {
@@ -62,28 +78,31 @@ var videoInit = function() {
         }
     });
 
-    $('#subs-toggle').click(function() {
+    $('#subs-toggle').on('click', function(e) {
         if (this.checked) {
-            alert(1);
-            $('#big-video-wrap video track').addClass('show');
-            $('#big-video-wrap video track').removeClass('hide');
+            vid.textTracks[0].mode = "showing";
         } else {
-            $('#big-video-wrap video track').addClass('hide');
-            $('#big-video-wrap video track').removeClass('show');
+            vid.textTracks[0].mode = "disabled";
         }
     });
 
-    //var textTracks = vid.textTracks; // one for each track element
-    // var textTrack = textTracks[0]; // corresponds to the first track element
-    //textTrack.kind = "subtitles"; // e.g. "subtitles"
     //textTrack.mode = "showing"; // e.g. "disabled", hidden" or "showing"
-    vid.innerHTML = '<track id="videoBGSubs" kind="captions" src="subs/bgSubs.vtt" srclang="en" label="Bulgarian" default>'
-        $('#flag-en').on('click', function(e) {
-            $('#videoBGSubs').remove();
-            vid.innerHTML = '<track id="videoENSubs" kind="captions" src="subs/enSubs.vtt" srclang="en" label="English">'
-        });
-    $('#flag-bg').on('click', function(e) {
-        $('#videoENSubs').remove();
-        vid.innerHTML = '<track id="videoBGSubs" kind="captions" src="subs/bgSubs.vtt" srclang="en" label="Bulgarian">'
+    var textTracks = vid.textTracks; // one for each track element
+    var textTrack = textTracks[0]; // corresponds to the first track element
+//    vid.innerHTML = textTrack.init(vid, subs[defaultLang]);
+    vid.innerHTML = _generateTrack(subs[DEFAULT_LANG], true);
+
+    $('.lang-flag').on('click', function(e) {
+        var _this = $(this);
+        var lang = _this.attr('alt');
+        vid.innerHTML = _generateTrack(subs[lang]);
     });
+}
+
+var _generateTrack = function(sub, isDefault) {
+    var def = "";
+    if (isDefault) {
+        def = "default";
+    }
+    return '<track kind="subtitles" src="' + sub.src + '" srclang="' + sub.srclang + '" label="' + sub.label + '" ' + def + '>';
 }
