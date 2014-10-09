@@ -16,28 +16,9 @@
     <link href="css/style.css" rel="stylesheet" />
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&amp;subset=cyrillic" rel="stylesheet" type="text/css">
 
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-
-    <script>
-        function initialize() {
-            var myLatlng = new google.maps.LatLng(42.6781787, 23.33333689999995);
-            var mapOptions = {
-                zoom: 4,
-                center: myLatlng
-            }
-            var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-            var marker = new google.maps.Marker({
-                position: myLatlng,
-                map: map,
-                title: 'Hello World!'
-            });
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+   
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -86,6 +67,8 @@
                             <li class="controlls">
                                 <img class="lang-flag" src="img/flags/en.png" alt="en" />
                                 <img class="lang-flag" src="img/flags/bg.png" alt="bg" />
+                                <img class="lang-flag" src="img/flags/gr.png" alt="en" />
+                                <img class="lang-flag" src="img/flags/fr.png" alt="bg" />
                             </li>
                             <li class="controlls">
                                 <span class="volume-btn">
@@ -156,55 +139,51 @@
             <div class="bcg">
                 <div class="hsContainer">
                     <div class="hsContent">
-                        <div class="" data-106-top="opacity: 0" data--30p-top="opacity: 1;" data--60p-top="opacity: 0;"
-                            data-bottom="opacity: 1; position: fixed; top: 206px; width: 100%; left: 0;" data-anchor-target="#pricing">
-                            <h2>Fixed element fading in and out</h2>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contacts" class="content-section text-center">
+        <section id="contacts" class="shadower text-center">
             <!-- <div class="row"> -->
             <div class="contact-section">
                 <div class="container">
                     <h2>Contact Us</h2>
-                    <div class="row" style="text-align: left;">
+                    <div class="row" style="section-content">
                         <div class="col-md-6">
-                            <div class="group">
-                                <h3>Address</h3>
-                                <p><i class="fa fa-home fa-2x"></i>Arh. Jordan Milanov str. 38</a></p>
-                            </div>
-                            <div class="group">
-                                <h3>Telephone number</h3>
-                                <p><i class="fa fa-mobile fa-2x"></i>+359 887 717 276</p>
-                            </div>
-                            <div class="group">
-                                <h3>You can write for reservation at:</h3>
-                                <p><a href="mailto:office@pbioc.com"><i class="fa fa-envelope-o fa-2x"></i>office@pbioc.com</a></p>
-                            </div>
+                            <table>
+                                <tr>
+                                    <td><i class="fa fa-home fa-2x"></i></td>
+                                    <td>Arh. Jordan Milanov str. 38</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa fa-mobile fa-3x"></i></td>
+                                    <td>+359 887 717 276</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="mailto:office@pbioc.com"><i class="fa fa-envelope-o fa-2x"></i></a></td>
+                                    <td><a href="mailto:office@pbioc.com">office@pbioc.com</a></td>
+                                </tr>
+                            </table>
+
                             <div class="banner-social-buttons">
-                                <h3>Social Networks</h3>
-                                <div class="">
-                                    <a href="https://facebook.com/pbioc" class="" style="padding: 10px" target="_blank">
-                                        <i class="fa fa-facebook fa-3x"></i>
-                                    </a>
+                                <a href="https://facebook.com/pbioc" class="" style="padding: 10px" target="_blank">
+                                    <i class="fa fa-facebook fa-3x"></i>
+                                </a>
 
-                                    <a href="https://www.linkedin.com/nhome/" class="" style="padding: 10px" target="_blank">
-                                        <i class="fa fa-linkedin fa-3x"></i>
-                                    </a>
+                                <a href="https://www.linkedin.com/nhome/" class="" style="padding: 10px" target="_blank">
+                                    <i class="fa fa-linkedin fa-3x"></i>
+                                </a>
 
-                                    <a href="http://www.pinterest.com/" class="" style="padding: 10px" target="_blank">
-                                        <i class="fa fa-pinterest-square fa-3x"></i>
-                                    </a>
-                                </div>
+                                <a href="http://www.pinterest.com/" class="" style="padding: 10px" target="_blank">
+                                    <i class="fa fa-pinterest-square fa-3x"></i>
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div id="map-canvas"></div>
-                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.205991239886!2d23.33333689999999!3d42.6781787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85af39f43bdb%3A0x764b661931f5dc2!2z0YPQuy4g4oCe0LDRgNGFLiDQmdC-0YDQtNCw0L0g0JzQuNC70LDQvdC-0LLigJwgMzgsIDExNjQg0KHQvtGE0LjRjw!5e0!3m2!1sbg!2sbg!4v1412811241353" width="100%" height="350" frameborder="0"></iframe>
+                          </div>
                     </div>
                 </div>
         </section>

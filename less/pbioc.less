@@ -3,13 +3,12 @@
 
 body, html {
 
-    height: 100%;
-    min-height: 100%;
     background-color: #fff;
     overflow-x:hidden;
     color: #fff;
 
     font-family:@font-family-body;
+    font-weight: 300;
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
 
@@ -28,16 +27,15 @@ h4,
 h5,
 h6 {
     margin: 0 0 15px;
-    text-transform: uppercase;
     font-family: @font-family-menus;
-    font-weight: 700;
+    font-weight: 300;
     letter-spacing: 1px;
 }
 
 p {
     margin: 0 0 25px;
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 12px;
+    line-height: 1;
 }
 
 a {
@@ -67,7 +65,7 @@ a {
     font-family: @font-family-menus;
     .navbar-brand {
         padding:0px;
-        font-weight: 700;
+        font-weight: 300;
         &:focus {
             outline: none;
         }
@@ -155,7 +153,7 @@ a {
 
 .navbar-right-custom {
     font-family: @font-family-menus;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 16px;
 }
 
@@ -168,7 +166,7 @@ a {
     box-shadow: 5px 5px 5px #888888;
     text-transform: uppercase;
     font-family: @font-family-menus;
-    font-weight: 700;
+    font-weight: 300;
     letter-spacing: 1px;
 }
 
@@ -180,7 +178,7 @@ a {
     img { border: solid 1px;}
 
     font-family: @font-family-menus;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 16px;
 }
 
@@ -402,10 +400,6 @@ span.radio-label {
     }
 }
 
-.content-section {
-    padding-top: 100px;
-}
-
 .container-relative {
     position: relative;
 }
@@ -414,11 +408,31 @@ span.radio-label {
     background-color: #5b9b40;
     display: table;
     width: 100%;
+    height: 100%;
     padding: 50px 0;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+
+    table {
+        td {
+            padding: 5px 10px;
+            font-size: 16pt;
+            text-align: left;
+            i {
+                text-align: right;
+            }
+        }
+    }
+
+    h2 {
+        margin-bottom: 45px;
+    }
+
+    .banner-social-buttons {
+        margin-top: 45px;
+    }
 }
 
 .btn {
@@ -442,13 +456,9 @@ span.radio-label {
     }
 }
 
-ul.banner-social-buttons {
-    margin-top: 0;
-}
-
 @media(max-width:1199px) {
-    ul.banner-social-buttons {
-        margin-top: 15px;
+    .banner-social-buttons {
+        margin-top: 45px;
     }
 }
 
@@ -457,8 +467,8 @@ footer {
     p {
         margin: 0;
     }
-    background-color: #fff;
-    color:#000;
+    background-color: @light;
+    color: @menu-link;
 }
 
 ::-moz-selection {
@@ -507,14 +517,6 @@ label {
 
 .order-box {
     display: none;
-}
-#map-canvas{
-    height: 400px;
-    width: 550px;
- 
-}
-.group{
-    margin-bottom:35px;
 }
 
 @media(min-width:767px) {
@@ -569,10 +571,10 @@ label {
         }
     }
 
-    ul.banner-social-buttons {
+    .banner-social-buttons {
         li {
             display: block;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             padding: 0;
             &:last-child {
                 margin-bottom: 0;
@@ -604,7 +606,6 @@ label {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 100%;
     width: 100%;
 }
 
@@ -617,21 +618,33 @@ label {
     }
 }
 
-#methods .bcg {
-    background: none;
-    background-color: #6ba741;
+#methods {
     height: 510px;
-    text-align: center
+    .bcg {
+        height: 100%;
+        background: none;
+        background-color: #6ba741;
+        text-align: center
+    }
 }
 
-#pricing .bcg {
-    background-image:url('https://gp1.wac.edgecastcdn.net/806614/photos/photos.500px.net/82772303/8635e80d94ecdf01597311b42b26258ce281d5c2/5.jpg');
-    height: 989px;
-}
-
-#contacts .bcg {
-    background-image:url('https://gp1.wac.edgecastcdn.net/806614/photos/photos.500px.net/81953299/fe0a39c8f93d1357e83ddd62ddc523ab78d3a72a/5.jpg');
+#pricing {
     height: 710px;
+    font-weight: 700;
+    .bcg {
+        background: @light;
+    }   
+}
+
+#contacts {
+    height: 510px;
+    text-align: center;
+    .bcg {
+        background-color: #6ba741;
+    }
+    iframe {
+        border: 4px solid @light;
+    }
 }
 
 .hsContainer {
