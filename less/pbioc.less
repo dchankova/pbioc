@@ -96,7 +96,6 @@ a {
                 -moz-transition: background .3s ease-in-out;
                 transition: background .3s ease-in-out;
                 &:hover {
-                    color: #BEB7B7;
                     background-color: transparent;
                 }
                 &:focus,
@@ -120,7 +119,7 @@ a {
         }
 
         .volume-btn {
-            color: #646464;
+            color: @menu-link;
         }
         .volume-btn input[type=checkbox] + label:before {
             content: "\f026";
@@ -139,7 +138,7 @@ a {
         }
 
         .subs-btn input[type=checkbox]:checked + label:before {
-            color: @light;
+            color: @menu-link;
         }
 
         .controlls {
@@ -533,11 +532,32 @@ label {
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
+
+
+        -webkit-transition: opacity .5s ease-in-out;
+        -moz-transition: opacity .5s ease-in-out;
+        transition: opacity .5s ease-in-out;
+        opacity: 0.3;
+        filter: alpha(opacity=30);
+
+        &:hover {
+            opacity: 1;
+            filter: alpha(opacity=30);
+            -webkit-transition: opacity .5s ease-in-out;
+            -moz-transition: opacity .5s ease-in-out;
+            transition: opacity .5s ease-in-out;
+        }
     }
 
     .top-nav-collapse {
         padding: 0;
         background-color:@background-menus;
+
+        -webkit-transition: opacity .5s ease-in-out;
+        -moz-transition: opacity .5s ease-in-out;
+        transition: opacity .5s ease-in-out;
+        opacity: 1;
+        filter: alpha(opacity=100);
 
         .nav {
             a {
@@ -588,11 +608,13 @@ label {
     width: 100%;
 }
 
-#team .bcg {
-    background-image: url('../img/doctors.jpg');
-    background-color: #fff;
-    background-size: 20%;
+#team {
     height: 400px;
+    .bcg {
+        background-image: url('../img/doctors.jpg');
+        background-color: #fff;
+        background-size: 20%;
+    }
 }
 
 #methods .bcg {
@@ -631,18 +653,11 @@ label {
     text-align: center
 }
 
-#flag-en {
-    height: 14px;
+.shadower, .vjs-tech {
+    -webkit-box-shadow: 0 0 15px 5px #737373;
+    box-shadow: 0 0 15px 5px #737373;
 }
 
-#flag-bg {
-    height: 14px;
-}
-
-#videoBGSubs {
-    position: absolute;
-    bottom: 5%;
-    right: 27%;
-    padding: 20px;
-    background: #000;
+.lang-flag {
+    border: 1px solid @menu-link;
 }
