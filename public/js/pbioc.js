@@ -9,19 +9,6 @@ $(window).scroll(function() {
 
 var DEFAULT_LANG = "bg";
 
-var subs = {
-    en : {
-        label : "English",
-        srclang : "en",
-        src : "subs/en-subs.vtt"
-    },
-    bg : {
-        label : "Bulgarian",
-        srclang : "bg",
-        src : "subs/bg-subs.vtt"
-    }
-}
-
 $(function() {
 
     scrollrInit();
@@ -78,31 +65,8 @@ var videoInit = function() {
         }
     });
 
-    $('#subs-toggle').on('click', function(e) {
-        if (this.checked) {
-            vid.textTracks[0].mode = "showing";
-        } else {
-            vid.textTracks[0].mode = "disabled";
-        }
-    });
-
-    //textTrack.mode = "showing"; // e.g. "disabled", hidden" or "showing"
-    var textTracks = vid.textTracks; // one for each track element
-    var textTrack = textTracks[0]; // corresponds to the first track element
-//    vid.innerHTML = textTrack.init(vid, subs[defaultLang]);
-    vid.innerHTML = _generateTrack(subs[DEFAULT_LANG], true);
-
+   
     $('.lang-flag').on('click', function(e) {
-        var _this = $(this);
-        var lang = _this.attr('alt');
-        vid.innerHTML = _generateTrack(subs[lang]);
+        //
     });
-}
-
-var _generateTrack = function(sub, isDefault) {
-    var def = "";
-    if (isDefault) {
-        def = "default";
-    }
-    return '<track kind="subtitles" src="' + sub.src + '" srclang="' + sub.srclang + '" label="' + sub.label + '" ' + def + '>';
 }
