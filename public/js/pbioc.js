@@ -1,22 +1,22 @@
 // jQuery to collapse the navbar on scroll
-$(window).scroll(function() {
+/*$(window).scroll(function() {
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
     }
-});
+});*/
 
-var DEFAULT_LANG = "bg";
+// var DEFAULT_LANG = "bg";
 
 $(function() {
 
     scrollrInit();
-    videoInit();
-    closeResponsiveMenuOnClick();    
-    initMenuAnimation();
+    // videoInit();
+    //closeResponsiveMenuOnClick();
+    //initMenuAnimation();
 
-    $('.video-js').css('position','relative');
+    //$('.video-js').css('position','relative');
 });
 
 var initMenuAnimation = function() {
@@ -32,7 +32,7 @@ var initMenuAnimation = function() {
 var closeResponsiveMenuOnClick = function() {
     $('.navbar-collapse ul li a').click(function() {
         $('.navbar-toggle:visible').click();
-    });    
+    });
 }
 
 var scrollrInit = function() {
@@ -65,7 +65,7 @@ var videoInit = function() {
         }
     });
 
-   
+
     $('.lang-flag').on('click', function(e) {
         //
     });
