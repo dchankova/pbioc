@@ -29,6 +29,14 @@
 
 <body data-spy="scroll">
 
+    <div class="mobileMenu" id="menu-toggle">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <h2>Menu</h2>
+    </div>
     <div id="wrapper" class="toggled">
 
         <!-- Sidebar -->
@@ -52,126 +60,126 @@
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
-    </div>
 
-    <div>
-        <div class="main" id="page-content-wrapper" >
-            <a href="#" class="btn btn-default" id="menu-toggle" style="position: absolute; top: 10px; left: 500px; z-index: 2;">Toggle Menu</a>
+        <div>
+            <div class="main" id="page-content-wrapper" >
 
-            <!-- Sections  -->
-            <section id="landing">
-                <!-- Arrow -->
-                <div class="arrow">
-                    <div class="arrow-body">
+                <!-- Sections  -->
+                <section id="landing">
+                    <!-- Arrow -->
+                    <div class="arrow">
+                        <div class="arrow-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <a href="#team" class="btn btn-circle page-scroll">
+                                            <i class="fa fa-angle-double-down animated"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <video autoplay loop muted poster="img/poster.jpg" id="bgvid">
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4">
+                    </video>
+                </section>
+
+                <section id="team">
+                    <div class="bcg" data-0="background-postition: 110% 80%;" data-top="background-position: 150% 90%;" data-anchor-target="#team">
+                        <div class="hsContainer">
+                            <div class="hsContent">
+                                <h2 data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0"
+                                    data-anchor-target="#team h2" class="">Fade me in and out</h2>
+                                <p data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0"
+                                    data-anchor-target="#team h2" class="">
+                                    Here we are changing the background color from blue to black. Text is fading
+                                in at 206 pixels from the bottom and fading out 106 pixels from the top.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="methods" class="shadower">
+                    <div class="bcg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;"
+                        data-anchor-target="#methods" style="background-position: 50% 0px;">
+                        <div class="hsContainer">
+                            <div class="hsContent" data-center="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#methods h2">
+                                <h2>Fade out elements before
+                                <br />
+                                    they leave viewport</h2>
+                                <p>
+                                    This slide moves background image at a slower speed then the page scroll. Text is fading out to opacity 0 at 106
+                                pixels from the top.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="pricing" class="">
+                    <div class="bcg">
+                        <div class="hsContainer">
+                            <div class="hsContent">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <section id="contacts" class="shadower text-center">
+                    <!-- <div class="row"> -->
+                    <div class="contact-section">
                         <div class="container">
-                            <div class="row">
-                                <div class="col-md-8 col-md-offset-2">
-                                    <a href="#team" class="btn btn-circle page-scroll">
-                                        <i class="fa fa-angle-double-down animated"></i>
-                                    </a>
+                            <h2>Contact Us</h2>
+                            <div class="row" style="section-content">
+                                <div class="col-md-6">
+                                    <table>
+                                        <tr>
+                                            <td><i class="fa fa-home fa-2x"></i></td>
+                                            <td>38 Architect Jordan Milanov str.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-mobile fa-3x"></i></td>
+                                            <td>+359 887 717 276</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="mailto:office@pbioc.com"><i class="fa fa-envelope-o fa-2x"></i></a></td>
+                                            <td><a href="mailto:office@pbioc.com">office@pbioc.com</a></td>
+                                        </tr>
+                                    </table>
+
+                                    <div class="banner-social-buttons">
+                                        <a href="https://facebook.com/pbioc" class="" style="padding: 10px" target="_blank">
+                                            <i class="fa fa-facebook fa-3x"></i>
+                                        </a>
+
+                                        <a href="https://www.linkedin.com/nhome/" class="" style="padding: 10px" target="_blank">
+                                            <i class="fa fa-linkedin fa-3x"></i>
+                                        </a>
+
+                                        <a href="http://www.pinterest.com/" class="" style="padding: 10px" target="_blank">
+                                            <i class="fa fa-pinterest-square fa-3x"></i>
+                                        </a>
+                                    </div>
                                 </div>
+                                <div class="col-md-6">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.205991239886!2d23.33333689999999!3d42.6781787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85af39f43bdb%3A0x764b661931f5dc2!2z0YPQuy4g4oCe0LDRgNGFLiDQmdC-0YDQtNCw0L0g0JzQuNC70LDQvdC-0LLigJwgMzgsIDExNjQg0KHQvtGE0LjRjw!5e0!3m2!1sbg!2sbg!4v1412811241353" width="100%" height="350" frameborder="0"></iframe>
+                                  </div>
                             </div>
                         </div>
-                    </div>
+                </section>
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <div class="container text-center">
+                    <p class="paragraph-small">Copyright &copy; PBIOC 2014</p>
                 </div>
-                <video autoplay loop muted poster="img/poster.jpg" id="bgvid">
-                    <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4">
-                </video>
-            </section>
-
-            <section id="team">
-                <div class="bcg" data-0="background-postition: 110% 80%;" data-top="background-position: 150% 90%;" data-anchor-target="#team">
-                    <div class="hsContainer">
-                        <div class="hsContent">
-                            <h2 data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0"
-                                data-anchor-target="#team h2" class="">Fade me in and out</h2>
-                            <p data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0"
-                                data-anchor-target="#team h2" class="">
-                                Here we are changing the background color from blue to black. Text is fading
-                            in at 206 pixels from the bottom and fading out 106 pixels from the top.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="methods" class="shadower">
-                <div class="bcg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;"
-                    data-anchor-target="#methods" style="background-position: 50% 0px;">
-                    <div class="hsContainer">
-                        <div class="hsContent" data-center="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#methods h2">
-                            <h2>Fade out elements before
-                            <br />
-                                they leave viewport</h2>
-                            <p>
-                                This slide moves background image at a slower speed then the page scroll. Text is fading out to opacity 0 at 106
-                            pixels from the top.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="pricing" class="">
-                <div class="bcg">
-                    <div class="hsContainer">
-                        <div class="hsContent">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contacts" class="shadower text-center">
-                <!-- <div class="row"> -->
-                <div class="contact-section">
-                    <div class="container">
-                        <h2>Contact Us</h2>
-                        <div class="row" style="section-content">
-                            <div class="col-md-6">
-                                <table>
-                                    <tr>
-                                        <td><i class="fa fa-home fa-2x"></i></td>
-                                        <td>38 Architect Jordan Milanov str.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fa fa-mobile fa-3x"></i></td>
-                                        <td>+359 887 717 276</td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="mailto:office@pbioc.com"><i class="fa fa-envelope-o fa-2x"></i></a></td>
-                                        <td><a href="mailto:office@pbioc.com">office@pbioc.com</a></td>
-                                    </tr>
-                                </table>
-
-                                <div class="banner-social-buttons">
-                                    <a href="https://facebook.com/pbioc" class="" style="padding: 10px" target="_blank">
-                                        <i class="fa fa-facebook fa-3x"></i>
-                                    </a>
-
-                                    <a href="https://www.linkedin.com/nhome/" class="" style="padding: 10px" target="_blank">
-                                        <i class="fa fa-linkedin fa-3x"></i>
-                                    </a>
-
-                                    <a href="http://www.pinterest.com/" class="" style="padding: 10px" target="_blank">
-                                        <i class="fa fa-pinterest-square fa-3x"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.205991239886!2d23.33333689999999!3d42.6781787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85af39f43bdb%3A0x764b661931f5dc2!2z0YPQuy4g4oCe0LDRgNGFLiDQmdC-0YDQtNCw0L0g0JzQuNC70LDQvdC-0LLigJwgMzgsIDExNjQg0KHQvtGE0LjRjw!5e0!3m2!1sbg!2sbg!4v1412811241353" width="100%" height="350" frameborder="0"></iframe>
-                              </div>
-                        </div>
-                    </div>
-            </section>
+            </footer>
         </div>
 
-        <!-- Footer -->
-        <footer>
-            <div class="container text-center">
-                <p class="paragraph-small">Copyright &copy; PBIOC 2014</p>
-            </div>
-        </footer>
     </div>
 
     <script src="js/jquery.min.js"></script>
