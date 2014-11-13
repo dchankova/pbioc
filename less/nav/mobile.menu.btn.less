@@ -1,0 +1,50 @@
+/* Menu button */
+.mobileMenu {
+    cursor: pointer;
+    float: right;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    z-index: 40;
+}
+
+@media only screen and (min-width: 768px) {
+    .mobileMenu {
+        top: 35px;
+        right: 40px;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .mobileMenu {
+        position: fixed;
+    }
+}
+
+.mobileMenu h2 {
+    display: none;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+@media only screen and (min-width: 480px) {
+    .mobileMenu h2 {
+        color: white;
+        display: inline-block;
+        font-family: "Karla",Arial,sans-serif;
+        font-size: 20px;
+        margin: 0 5px 0 0;
+        text-transform: uppercase;
+        vertical-align: top;
+    }
+}
+
+.mobileMenu ul {
+    display: inline-block;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    width: 25px;
+}

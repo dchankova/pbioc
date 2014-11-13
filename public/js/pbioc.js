@@ -1,7 +1,4 @@
 $(function() {
-    scrollrInit();
+    var s = skrollr.init({forceHeight : false});
+    skrollr.menu.init(s, {});
 });
-
-var scrollrInit = function() {
-    var s = skrollr.init();
-}

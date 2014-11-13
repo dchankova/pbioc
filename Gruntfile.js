@@ -8,8 +8,8 @@ module.exports = function(grunt) {
           optimization: 2
         },
         files: {
-          // target.css file: source.less file 
-          "public/css/style.css": "less/pbioc.less",
+          // target.css file: source.less file
+          "public/css/style.css": "less/composer.less",
         }
       }
     },

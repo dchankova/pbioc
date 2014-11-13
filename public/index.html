@@ -18,7 +18,6 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&amp;subset=cyrillic" rel="stylesheet" type="text/css">
 
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -28,7 +27,7 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll">
+<body data-spy="scroll">
 
     <div id="wrapper" class="toggled">
 
@@ -36,12 +35,7 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
-                        Start Bootstrap
-                    </a>
-                </li>
-                <li class="hidden">
-                    <a href="#page-top"></a>
+                    <a class="page-scroll" href="#wrapper">Start Bootstrap</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="#team">Team</a>
@@ -58,26 +52,28 @@
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
+    </div>
 
+    <div>
         <div class="main" id="page-content-wrapper" >
-            <a href="#menu-toggle" class="btn btn-default" id="menu-toggle" style="position: absolute; top: 10px;">Toggle Menu</a>
-            <!-- Arrow -->
-            <div class="arrow">
-                <div class="arrow-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2">
-                                <a href="#team" class="btn btn-circle page-scroll">
-                                    <i class="fa fa-angle-double-down animated"></i>
-                                </a>
+            <a href="#" class="btn btn-default" id="menu-toggle" style="position: absolute; top: 10px; left: 500px; z-index: 2;">Toggle Menu</a>
+
+            <!-- Sections  -->
+            <section id="landing">
+                <!-- Arrow -->
+                <div class="arrow">
+                    <div class="arrow-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <a href="#team" class="btn btn-circle page-scroll">
+                                        <i class="fa fa-angle-double-down animated"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Sections  -->
-            <section id="landing">
                 <video autoplay loop muted poster="img/poster.jpg" id="bgvid">
                     <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4">
                 </video>
@@ -168,10 +164,7 @@
                         </div>
                     </div>
             </section>
-
         </div>
-
-
 
         <!-- Footer -->
         <footer>
@@ -188,7 +181,8 @@
 
     <script src="js/bootstrap.min.js"></script>
 
-    <script src="js/skrollr.js"></script>
+    <script src="js/skrollr.min.js"></script>
+    <script src="js/skrollr.menu.min.js"></script>
     <script src="js/modernizr.js"></script>
 
     <!-- Custom Theme JavaScript -->
