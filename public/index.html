@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/pace.preloader.css" rel="stylesheet" />
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&amp;subset=cyrillic" rel="stylesheet" type="text/css">
@@ -27,7 +28,7 @@
 
 </head>
 
-<body data-spy="scroll">
+<body data-spy="scroll" id="page-top">
 
     <div class="mobileMenu" id="menu-toggle">
         <ul>
@@ -43,21 +44,43 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a class="page-scroll" href="#wrapper">Start Bootstrap</a>
+                    <a class="page-scroll" href="#page-top">
+                        <div class="logo"></div>
+                    </a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#team">Team</a>
+                    <a class="page-scroll" href="#team"><span>Team</span><i class="fa fa-users fa-3"></i></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#methods">Methods</a>
+                    <a class="page-scroll" href="#therapy"><span>Therapy</span><i class="fa fa-check fa-3"></i></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#pricing">Pricing</a>
+                    <a class="page-scroll" href="#ilness"><span>Ilness</span><i class="fa fa-heart fa-3"></i></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contacts">Contact</a>
+                    <a class="page-scroll" href="#pricing"><span>Pricing</span><i class="fa fa-money fa-3"></i></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#contacts"><span>Contact</span><i class="fa fa-phone-square fa-3"></i></a>
                 </li>
             </ul>
+
+            <div class="sidebar-footer">
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-2">
+                        <a href="#" class="facebook"><i class="fa fa-facebook-square fa-3"></i></a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="#" class="twitter"><i class="fa fa-twitter-square fa-3"></i></a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="#" class="linkedin"><i class="fa fa-linkedin-square fa-3"></i></a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="#" class="vimeo"><i class="fa fa-vimeo-square fa-3"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- /#sidebar-wrapper -->
 
@@ -95,6 +118,23 @@
                                     data-anchor-target="#team h2" class="">
                                     Here we are changing the background color from blue to black. Text is fading
                                 in at 206 pixels from the bottom and fading out 106 pixels from the top.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="methods" class="shadower">
+                    <div class="bcg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;"
+                        data-anchor-target="#methods" style="background-position: 50% 0px;">
+                        <div class="hsContainer">
+                            <div class="hsContent" data-center="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#methods h2">
+                                <h2>Fade out elements before
+                                <br />
+                                    they leave viewport</h2>
+                                <p>
+                                    This slide moves background image at a slower speed then the page scroll. Text is fading out to opacity 0 at 106
+                                pixels from the top.
                                 </p>
                             </div>
                         </div>
@@ -192,6 +232,7 @@
     <script src="js/skrollr.min.js"></script>
     <script src="js/skrollr.menu.min.js"></script>
     <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/pbioc.js"></script>
