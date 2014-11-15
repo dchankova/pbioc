@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    <link href="css/pace.preloader.css" rel="stylesheet" />
+    <!-- <link href="css/pace.preloader.css" rel="stylesheet" /> -->
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&amp;subset=cyrillic" rel="stylesheet" type="text/css">
@@ -32,9 +32,9 @@
 
     <div class="mobileMenu" id="menu-toggle">
         <ul>
+            <li class="colored"></li>
             <li></li>
-            <li></li>
-            <li></li>
+            <li class="colored"></li>
         </ul>
         <h2>Menu</h2>
     </div>
@@ -49,13 +49,16 @@
                     </a>
                 </li>
                 <li>
+                    <a class="page-scroll" href="#about"><span>About</span><i class="fa fa-users fa-3"></i></a>
+                </li>
+                <li>
                     <a class="page-scroll" href="#team"><span>Team</span><i class="fa fa-users fa-3"></i></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#therapy"><span>Therapy</span><i class="fa fa-check fa-3"></i></a>
+                    <a class="page-scroll" href="#medical-issues"><span>Medical issues</span><i class="fa fa-heart fa-3"></i></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#ilness"><span>Ilness</span><i class="fa fa-heart fa-3"></i></a>
+                    <a class="page-scroll" href="#procedures"><span>Procedures</span><i class="fa fa-check fa-3"></i></a>
                 </li>
                 <li>
                     <a class="page-scroll" href="#pricing"><span>Pricing</span><i class="fa fa-money fa-3"></i></a>
@@ -95,7 +98,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-8 col-md-offset-2">
-                                        <a href="#team" class="btn btn-circle page-scroll">
+                                        <a href="#about" class="btn btn-circle page-scroll">
                                             <i class="fa fa-angle-double-down animated"></i>
                                         </a>
                                     </div>
@@ -103,32 +106,45 @@
                             </div>
                         </div>
                     </div>
-                    <video autoplay loop muted poster="img/poster.jpg" id="bgvid">
+                    <video autoplay loop muted id="bgvid">
                         <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4">
                     </video>
                 </section>
 
-                <section id="team">
-                    <div class="bcg" data-0="background-postition: 110% 80%;" data-top="background-position: 150% 90%;" data-anchor-target="#team">
-                        <div class="hsContainer">
-                            <div class="hsContent">
-                                <h2 data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0"
-                                    data-anchor-target="#team h2" class="">Fade me in and out</h2>
-                                <p data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0"
-                                    data-anchor-target="#team h2" class="">
-                                    Here we are changing the background color from blue to black. Text is fading
-                                in at 206 pixels from the bottom and fading out 106 pixels from the top.
-                                </p>
-                            </div>
+                <section id="about" class="odd">
+                    <div class="row">
+                        <div class="col-md-2 col-md-offset-3 section-head"><span>About "Physiotherapy Bio Center"</span></div>
+                        <div class="col-md-6 col-md-offset-3 about-content">
+                            <p>The "Physiotherapy Bio Center" was created to treat, restore, maintain and care for the physical health of our clients. The center is qualified in Massage Therapy (Physiotherapy) and Physical Medicine. We have the latest generation of high quality equipment for physiotherapy (electrotherapy, Ultrasound therapy, Deep oscillation) from the German company Physiomed, which is a leading manufacturer of equipment for the rehabilitation. All our products including massage oils are organic in origin.</p>
+                            <p>With us you can count on professionalism and the highest quality.</p>
                         </div>
                     </div>
                 </section>
 
-                <section id="methods" class="shadower">
-                    <div class="bcg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;"
-                        data-anchor-target="#methods" style="background-position: 50% 0px;">
+                <section id="team" class="odd">
+                    <div class="row">
+                        <div class="col-md-2 col-md-offset-3 section-head"><span>Team</span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-md-offset-3">
+                            <div class="person-pic">
+                                <img src="img/panos.jpg" />
+                                <span class="person-pic-title">Panagiotis Tsimplis</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="person-info"></div>
+                        </div>
+                        <div class="col-md-3">
+                        </div>
+                    </div>
+                </section>
+
+                <section id="medical-issues" class="even">
+                    <div data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;"
+                        data-anchor-target="#medical-issues" style="background-position: 50% 0px;">
                         <div class="hsContainer">
-                            <div class="hsContent" data-center="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#methods h2">
+                            <div class="hsContent" data-center="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#medical-issues h2">
                                 <h2>Fade out elements before
                                 <br />
                                     they leave viewport</h2>
@@ -141,11 +157,11 @@
                     </div>
                 </section>
 
-                <section id="methods" class="shadower">
-                    <div class="bcg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;"
-                        data-anchor-target="#methods" style="background-position: 50% 0px;">
+                <section id="procedures" class="odd">
+                    <div data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;"
+                        data-anchor-target="#procedures" style="background-position: 50% 0px;">
                         <div class="hsContainer">
-                            <div class="hsContent" data-center="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#methods h2">
+                            <div class="hsContent" data-center="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#procedures h2">
                                 <h2>Fade out elements before
                                 <br />
                                     they leave viewport</h2>
@@ -158,17 +174,15 @@
                     </div>
                 </section>
 
-                <section id="pricing" class="">
-                    <div class="bcg">
-                        <div class="hsContainer">
-                            <div class="hsContent">
-                            </div>
+                <section id="pricing" class="even">
+                    <div class="hsContainer">
+                        <div class="hsContent">
                         </div>
                     </div>
                 </section>
 
                 <!-- Contact Section -->
-                <section id="contacts" class="shadower text-center">
+                <section id="contacts" class="odd text-center">
                     <!-- <div class="row"> -->
                     <div class="contact-section">
                         <div class="container">
@@ -213,7 +227,7 @@
             </div>
 
             <!-- Footer -->
-            <footer>
+            <footer class="even">
                 <div class="container text-center">
                     <p class="paragraph-small">Copyright &copy; PBIOC 2014</p>
                 </div>
@@ -232,7 +246,7 @@
     <script src="js/skrollr.min.js"></script>
     <script src="js/skrollr.menu.min.js"></script>
     <script src="js/modernizr.js"></script>
-    <script src="js/pace.min.js"></script>
+    <!-- <script src="js/pace.min.js"></script> -->
 
     <!-- Custom Theme JavaScript -->
     <script src="js/pbioc.js"></script>

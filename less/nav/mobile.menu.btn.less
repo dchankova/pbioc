@@ -18,7 +18,7 @@
 
 .mobileMenu h2 {
     display: none;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px @text-shadow;
 }
 
 .mobileMenu ul {
@@ -32,18 +32,22 @@
 }
 
 .mobileMenu ul li {
-    background: white;
+    background: @light;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
     border-radius: 2px;
-    -webkit-box-shadow: rgba(0,0,0,0.2) 1px 1px 1px;
-    -moz-box-shadow: rgba(0,0,0,0.2) 1px 1px 1px;
-    box-shadow: rgba(0,0,0,0.2) 1px 1px 1px;
+    -webkit-box-shadow: @text-shadow 1px 1px 1px;
+    -moz-box-shadow: @text-shadow 1px 1px 1px;
+    box-shadow: @text-shadow 1px 1px 1px;
     height: 3px;
     margin: 3px 0;
     width: 100%;
+}
+
+.mobileMenu ul li.colored {
+    background-color: @light-green;
 }
 
 @media only screen and (min-width: 768px) {
@@ -59,7 +63,7 @@
     }
 
     .mobileMenu h2 {
-        color: white;
+        color: @light;
         display: inline-block;
         font-family: "Karla",Arial,sans-serif;
         font-size: 20px;
