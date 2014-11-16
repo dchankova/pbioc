@@ -6,7 +6,6 @@ section {
     height:100vh;
     width:100%;
     font-family: @font-family-content;
-    padding: 50px 0;
 }
 
 .bcg {
@@ -37,6 +36,7 @@ section {
 }
 
 .section-head {
+    margin-top: 60px;
     color: @dark-text;
     height: 40px;
     line-height: 40px;
@@ -45,11 +45,13 @@ section {
     text-align: center;
 }
 
+.section-head:after {
+    content: url('../img/leaf.png');
+}
+
 .content {
-    color: @dark-green-text;
+    color: @dark;
     padding: 20px;
-    margin-top: 50px;
-    font-weight: bold;
     p, li {
         font-size: 15pt;
     }
@@ -75,6 +77,25 @@ section {
     color: @light-text;
 }
 
+.separator-section {
+    height: 10px;
+    padding: 0;
+    background-color: @light-green;
+}
+
+.separator-row {
+    height: 30px;
+    background-image: url('../img/separator.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    height: 100%;
+}
+
 #landing {
     padding: 0;
     video#bgvid {
@@ -84,9 +105,21 @@ section {
 }
 
 #about {
+    .about-pic {
+        margin-left: 20px;
+        height: 500px;
+        background-image: url('../img/man-shadow.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 }
 
 #medical-issues {
+    background-image: url('../img/back-pain.jpg');
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
 }
 
 #procedures {
