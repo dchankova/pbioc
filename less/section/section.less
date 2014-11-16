@@ -1,5 +1,14 @@
 /* TODO change with less variables */
 /* section background */
+
+section {
+    display: block;
+    height:100vh;
+    width:100%;
+    font-family: @font-family-content;
+    padding: 50px 0;
+}
+
 .bcg {
     background-position: center center;
     background-repeat: no-repeat;
@@ -28,28 +37,27 @@
 }
 
 .section-head {
-    -moz-transform: skewX(15deg) skewY(0deg);
-    -webkit-transform: skewX(15deg) skewY(0deg);
-    -o-transform: skewX(15deg) skewY(0deg);
-    -ms-transform: skewX(15deg) skewY(0deg);
-    transform: skewX(15deg) skewY(0deg);
-
-    -moz-transform: skewX(0deg) skewY(3.5deg);
-    -webkit-transform: skewX(0deg) skewY(3.5deg);
-    -o-transform: skewX(0deg) skewY(3.5deg);
-    -ms-transform: skewX(0deg) skewY(3.5deg);
-    transform: skewX(0deg) skewY(3.5deg);
-
-    background-color: @dark-green;
-    color: @light-text;
+    color: @dark-text;
     height: 40px;
     line-height: 40px;
-    font-size: 14pt;
+    font-size: 16pt;
+    font-weight: bold;
     text-align: center;
 }
 
-.odd, .even {
-    padding: 50px 0;
+.content {
+    color: @dark-green-text;
+    padding: 20px;
+    margin-top: 50px;
+    font-weight: bold;
+    p, li {
+        font-size: 15pt;
+    }
+}
+
+.paragraph-title {
+    color: @dark-text;
+    font-size: 15pt;
 }
 
 .odd {
@@ -62,57 +70,40 @@
 }
 
 .even {
-    background-color: @light-green;
+    background-color: @pearl;
+    /*background-color: @light-green;*/
     color: @light-text;
 }
 
 #landing {
-    display: block;
-    height:100%;
-    width:100%;
-    box-sizing:border-box;
-
+    padding: 0;
     video#bgvid {
         height: 100%;
         background: url(../img/poster.jpg) no-repeat;
     }
 }
 
-#about .about-content {
-    background: @light-green;
-    color: @dark-text;
-    padding: 20px;
-    -webkit-transform: skew(0deg,3.5deg);
-    -moz-transform: skew(0deg,3.5deg);
-    -ms-transform: skew(0deg,3.5deg);
-    -o-transform: skew(0deg,3.5deg);
-    transform: skew(0deg,3.5deg);
-    margin-top: 50px;
+#about {
+}
+
+#medical-issues {
+}
+
+#procedures {
+}
+
+#pricing {
+    font-weight: 700;
 }
 
 #team {
-    height: 400px;
     .bcg {
         background-image: url('../img/doctors.jpg');
         background-size: 20%;
     }
 }
 
-#procedures {
-    height: 510px;
-}
-
-#medical-issues {
-    height: 510px;
-}
-
-#pricing {
-    height: 710px;
-    font-weight: 700;
-}
-
 #contacts {
-    height: 510px;
     text-align: center;
     iframe {
         border: 4px solid @light;
@@ -121,8 +112,6 @@
 
 .contact-section {
     display: table;
-    width: 100%;
-    height: 100%;
     padding: 50px 0;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -142,28 +131,5 @@
 
     h2 {
         margin-bottom: 45px;
-    }
-
-    .banner-social-buttons {
-        margin-top: 45px;
-    }
-}
-
-@media(max-width:1199px) {
-    .banner-social-buttons {
-        margin-top: 45px;
-    }
-}
-
-@media(min-width:767px) {
-    .banner-social-buttons {
-        li {
-            display: block;
-            margin-bottom: 40px;
-            padding: 0;
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
     }
 }
